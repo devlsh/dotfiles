@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+CONFIG="$HOME/.cache/wal/mako.conf"
+
+if [[ ! $(pidof mako) ]]; then
+  mako --config ${CONFIG}
+fi

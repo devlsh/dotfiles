@@ -1,0 +1,15 @@
+# Generic
+alias bluetooth="bluetuith"
+alias editalias="nano ~/.aliases"
+alias reloadalias="source ~/.zshrc"
+alias pub="cat ~/.ssh/id_ed25519.pub"
+alias matrix="cmatrix"
+alias fetch="neofetch"
+alias mixer="ncpamixer"
+alias vim="nvim"
+alias ls="ls -la"
+alias habbo="~/habbo/Habbo"
+alias pkhex="WINEPREFIX=~/.pkhex wine ~/pkhex/PKHeX.exe"
+
+# Sites
+alias places="code ~/sites/places && exit"

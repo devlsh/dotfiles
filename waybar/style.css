@@ -1,0 +1,71 @@
+@import url('../../.cache/wal/colors-waybar.css');
+
+/**
+ * Global styles.
+ */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: 'Dank Mono', 'Material Design Icons', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  min-height: 0px;
+}
+
+window#waybar {
+  background: transparent;
+  color: white;
+}
+
+tooltip {
+  background: @background;
+}
+
+tooltip label {
+  color: @foreground;
+}
+
+/**
+ * Global module styles.
+ */
+#workspaces,
+#pulseaudio,
+#temperature,
+#battery,
+#memory,
+#cpu,
+#clock {
+  background: @background;
+  color: @foreground;
+  padding: 6px 16px;
+}
+
+/**
+ * Sway workspaces.
+ */
+#workspaces {
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+#workspaces button {
+  padding: 3px 8px;
+  background: transparent;
+  color: @foreground;
+  margin-left: 6px;
+}
+
+#workspaces button:first-child {
+  margin-left: 0;
+}
+
+#workspaces button.focused {
+  background: @foreground;
+  color: @background;
+}
+
+/**
+ * Clock.
+ */
+#clock {
+
+}

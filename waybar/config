@@ -1,0 +1,37 @@
+{
+  "layer": "top",
+  "modules-left": ["cpu", "memory", "temperature"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["battery", "pulseaudio", "clock"],
+  "fixed-center": true,
+  "output": ["eDP-1"],
+  "margin-right": 20,
+  "margin-left": 20,
+  "margin-top": 20,
+  "spacing": 20,
+  "hyprland/workspaces": {
+    "all-outputs": true
+  },
+  "clock": {
+    "interval": 1,
+    "format": "󰅐 {:%H:%M:%S}"
+  },
+  "battery": {
+    "format": "󰂎 {capacity}%"
+  },
+  "cpu": {
+    "format": "󰘚 {usage}%"
+  },
+  "memory": {
+    "format": "󰍛 {percentage}%"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 muted",
+    "format-source-muted": "󰝟 muted",
+    "format-icons": ["󰕿", "󰖀", "󰕾"]
+  },
+  "temperature": {
+    "format": "󰔏 {temperatureC}°C"
+  }
+}

@@ -1,0 +1,7 @@
+prompt=...
+mode=drun
+term=kitty
+insensitive=true
+sort_order=alphabetical
+width=500
+key_expand=Tab

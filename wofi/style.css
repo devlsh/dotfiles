@@ -1,0 +1,39 @@
+* {
+  font-family: 'Dank Mono';
+  font-size: 16px;
+}
+
+window {
+  background-color: --wofi-color7;
+}
+
+#input {
+  margin: 0;
+  margin-bottom: 16px;
+  border-radius: 0px;
+  border: none;
+  background-color: transparent;
+  color: --wofi-color15;
+  outline: none !important;
+}
+
+#outer-box {
+  margin: 2px;
+  padding: 16px;
+  background-color: --wofi-color0;
+}
+
+#text {
+  padding: 5px;
+  color: --wofi-color15;
+}
+
+#entry:selected {
+  background-color: --wofi-color1;
+  outline: none;
+}
+
+#text:selected {
+  color: --wofi-color0;
+  outline: none;
+}

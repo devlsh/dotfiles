@@ -1,0 +1,8 @@
+profile {
+  output eDP-1 enable scale 1.25 mode 2560x1440@165Hz
+}
+
+profile {
+  output eDP-1 enable scale 1.25 mode 2560x1440@165Hz position 3000,1440
+  output DP-2 enable scale 1 mode 3440x1440@60Hz
+}
