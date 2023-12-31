@@ -18,14 +18,9 @@ exec-once = /usr/lib/polkit-kde-authentication-agent-1
 
 # Environment Variables.
 env = QT_QPA_PLATFORMTHEME,qt5ct
-env = GTK_THEME,Adwaita:dark
-env = QT_STYLE_OVERRIDE,adwaita-dark
-env = GTK2_RC_FILES,/usr/share/themes/Adwaita-dark/gtk-2.0/gtkrc
 #env = GDK_BACKEND,wayland;x11
 
 # NVIDIA stuff... God save us all.
 env = WLR_NO_HARDWARE_CURSORS,1
-env = LIBVA_DRIVER_NAME,radeonsi
 env = MOZ_ENABLE_WAYLAND,1
 env = XDG_SESSION_TYPE,wayland
-env = VDPAU_DRIVER,radeonsi
