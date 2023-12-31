@@ -116,8 +116,18 @@ mkinitcpio -P
 ```bash
 filefrag -v /swapfile | less # First number on line `0:` under `physical_offset` is `X`
 blkid -s UUID -o value /dev/nvme0nXp2 # UUID for the partition is `Y`
-efibootmgr --disk /dev/nvme0nX --part 1 --create --label "HOSTNAME" --loader /vmlinuz-linux --unicode 'cryptdevice=UUID=Y:root root=/dev/mapper/root resume=/dev/mapper/root resume_offset=X rw quiet splash nvidia_drm.modeset=1 initrd=\amd-ucode.img initrd=\initramfs-linux.img' --verbose # Remove `nvidia_drm.modeset=1` if not using NVIDIA
+efibootmgr --disk /dev/nvme0nX --part 1 --create --label "HOSTNAME" --loader /vmlinuz-linux --unicode 'cryptdevice=UUID=Y:root root=/dev/mapper/root resume=/dev/mapper/root resume_offset=X rw quiet splash initrd=\amd-ucode.img initrd=\initramfs-linux.img' --verbose # Change `amd-ucode` for `intel-ucode` if on an Intel system.
 ```
+
+Depending on your system, you'll need to adjust for kernel parameters here - i.e. if using NVIDIA (god bless your soul), append `nvidia_drm.modeset=1`.
+
+#### Framework 13 AMD
+
+```bash
+efibootmgr --disk /dev/nvme0nX --part 1 --create --label "HOSTNAME" --loader /vmlinuz-linux --unicode 'cryptdevice=UUID=Y:root root=/dev/mapper/root resume=/dev/mapper/root resume_offset=X rw quiet splash rtc_cmos.use_acpi_alarm=1 amdgpu.sg_display=0 amd_iommu=off acpi_osi="!Windows 2020" initrd=\amd-ucode.img initrd=\initramfs-linux.img' --verbose
+```
+
+Utilizes some kernel params for various fixes listed [in the Arch Wiki for Framework](https://wiki.archlinux.org/title/Framework_Laptop_13).
 
 ### Ensure NetworkManager is always running
 
