@@ -9,7 +9,7 @@ I've documented my go-to initial installation for Arch [here](/SETUP.md).
 ## Applications
 
 - **Browser** - [Firefox Developer Edition](https://archlinux.org/packages/community/x86_64/firefox-developer-edition/)
-- **Code Editor** - [Visual Studio Code](https://aur.archlinux.org/packages/visual-studio-code-bin) _(don't hate me)_
+- **Code Editor** - [Visual Studio Code](https://aur.archlinux.org/packages/visual-studio-code-bin) _(don't hate me, vim soon)_
 - **Terminal** - [kitty](https://archlinux.org/packages/community/x86_64/kitty/)
 - **Font** - [Dank Mono](https://philpl.gumroad.com/l/dank-mono)
 - **Application Launcher** - [wofi](https://archlinux.org/packages/community/x86_64/wofi/)

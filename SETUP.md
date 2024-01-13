@@ -202,7 +202,14 @@ sudo pacman -S xdg-user-dirs
 `~/.config/user-dirs.dirs`:
 
 ```
-TODO:
+XDG_DESKTOP_DIR="$HOME/desktop"
+XDG_DOCUMENTS_DIR="$HOME/documents"
+XDG_DOWNLOAD_DIR="$HOME/downloads"
+XDG_MUSIC_DIR="$HOME/music"
+XDG_PICTURES_DIR="$HOME/pictures"
+XDG_PUBLICSHARE_DIR="$HOME/public"
+XDG_TEMPLATES_DIR="$HOME/templates"
+XDG_VIDEOS_DIR="$HOME/videos"
 ```
 
 ### Set-up `oh-my-zsh`
@@ -219,4 +226,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 
 ## Using an ASUS Laptop?
 
-Check out [ASUS Linux](https://asus-linux.org) for instructions on setting up the custom asus kernel and utilities.
+Check out [ASUS Linux](https://asus-linux.org) for instructions on setting up the custom ASUS Kernel and Utilities.
