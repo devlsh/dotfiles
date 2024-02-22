@@ -1,27 +1,25 @@
 # Generic
-alias bluetooth="bluetuith"
 alias editalias="nano ~/.aliases"
 alias reloadalias="source ~/.zshrc"
 alias pub="cat ~/.ssh/id_ed25519.pub"
-alias remove-orphans="pacman -Qtdq | sudo pacman -Rns -"
 alias shutdown="systemctl poweroff"
 alias matrix="cmatrix"
+alias cat="bat"
 alias fetch="neofetch"
 alias pdf="zathura"
 alias mixer="ncpamixer"
 alias vim="nvim"
 alias ls="ls -la"
-alias habbo="~/habbo/Habbo"
-alias pkhex="WINEPREFIX=~/.pkhex wine ~/pkhex/PKHeX.exe"
+
+# Helpers
 alias flashgbx="sudo chmod 666 /dev/ttyUSB0 && python3 -m FlashGBX"
 alias mount-storage="sudo cryptsetup open /dev/sdc1 storage && sudo mount -o gid=oyed,fmask=113,dmask=002 /dev/mapper/storage /mnt/storage && cd /mnt/storage"
 alias unmount-storage="cd ~ && sudo umount /mnt/storage && sudo cryptsetup close storage"
+alias remove-orphans="pacman -Qtdq | sudo pacman -Rns -"
+alias habbo="~/habbo/Habbo"
 
-# Sites
+# VSCode shortcuts
 alias canvid="code ~/sites/videocom/canvid && exit"
 alias casthub="code ~/sites/casthub && exit"
 alias places="code ~/sites/places && exit"
 alias oyed="code ~/sites/oyed && exit"
-
-# Fix for SSH over kitty.
-[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"

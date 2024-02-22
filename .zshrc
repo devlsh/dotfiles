@@ -16,5 +16,8 @@ source $HOME/.aliases
 # Load fnm
 eval "$(fnm env --use-on-cd)"
 
+# Fix for SSH over kitty
+[ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
+
 # Say hello!
 echo "$(<~/name.txt)"
