@@ -66,7 +66,7 @@ swapon /mnt/swapfile
 ### Install Arch Linux
 
 ```bash
-pacstrap -K /mnt base base-devel linux linux-firmware nano sudo networkmanager efibootmgr git curl wget reflector nftables pipewire pipewire-alsa pipewire-pulse wireplumber
+pacstrap -K /mnt base base-devel linux linux-firmware nano sudo networkmanager efibootmgr git curl wget reflector nftables pipewire pipewire-alsa pipewire-pulse wireplumber less
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 ```
