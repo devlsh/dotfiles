@@ -1,11 +1,13 @@
 #!/bin/bash
 
+monitor=(`hyprctl monitors | grep Monitor | awk '{print $2}'`)
+
 case "$1" in
   "init")
     wal -R
     ;;
   *)
-    wal -i "$HOME/pictures/wallpapers/$1.jpg"
+    wal -i "$HOME/pictures/wallpapers/$1"
     ;;
 esac
 
@@ -25,12 +27,12 @@ sh "$HOME/.config/hypr/scripts/statusbar" &
 
 pywalfox update
 
-swww img $wallpaper \
-    --transition-bezier .43,1.19,1,.4 \
-    --transition-fps=60 \
-    --transition-type="simple" \
-    --transition-duration=0.7 \
-    --transition-pos "$( hyprctl cursorpos )"
+hyprctl hyprpaper unload all
+hyprctl hyprpaper preload $wallpaper
+
+for m in ''${monitor[@]}; do
+  hyprctl hyprpaper wallpaper "$m,$wallpaper"
+done
 
 sleep 1
 kanshictl reload
