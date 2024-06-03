@@ -3,6 +3,6 @@ profile {
 }
 
 profile {
-  output eDP-1 enable scale 1.566667 mode 2256x1504@60Hz position 2100,1440
-  output DP-2 enable scale 1 mode 3440x1440@60Hz
+  output eDP-1 enable scale 1.566667 mode 2256x1504@60Hz position 1000,1440
+  output DP-2 enable scale 1 mode 3440x1440@60Hz position 0,0
 }
