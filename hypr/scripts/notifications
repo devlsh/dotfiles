@@ -2,6 +2,8 @@
 
 CONFIG="$HOME/.cache/wal/mako.conf"
 
-if [[ ! $(pidof mako) ]]; then
-  mako --config ${CONFIG}
+if [[ $(pidof mako) ]]; then
+  pkill mako
 fi
+
+mako --config ${CONFIG} &
