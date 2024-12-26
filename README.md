@@ -1,5 +1,5 @@
 <div align="center">
-  <h3>OYED Dotfiles</h3>
+  <h3>devlsh dotfiles</h3>
 </div>
 
 These are my [Arch Linux](https://archlinux.org/) Dotfiles! They're not intended to be used as a template, so don't expect drop-in support for configs.

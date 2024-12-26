@@ -4,7 +4,7 @@ monitor=(`hyprctl monitors | grep Monitor | awk '{print $2}'`)
 
 case "$1" in
   "init")
-    wal -R
+    wal -i "$HOME/.cache/wallpaper.jpg"
     ;;
   *)
     wal -i "$HOME/pictures/wallpapers/$1"
@@ -35,4 +35,5 @@ for m in ''${monitor[@]}; do
 done
 
 sleep 1
+spicetify update
 kanshictl reload
