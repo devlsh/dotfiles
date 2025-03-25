@@ -124,7 +124,7 @@ Depending on your system, you'll need to adjust for kernel parameters here - i.e
 #### Framework 13 AMD
 
 ```bash
-efibootmgr --disk /dev/nvme0nX --part 1 --create --label "HOSTNAME" --loader /vmlinuz-linux --unicode 'cryptdevice=UUID=Y:root root=/dev/mapper/root resume=/dev/mapper/root resume_offset=X rw quiet splash rtc_cmos.use_acpi_alarm=1 amdgpu.sg_display=0 amd_iommu=off acpi_osi="!Windows 2020" initrd=\amd-ucode.img initrd=\initramfs-linux.img' --verbose
+efibootmgr --disk /dev/nvme0nX --part 1 --create --label "HOSTNAME" --loader /vmlinuz-linux --unicode 'cryptdevice=UUID=Y:root root=/dev/mapper/root resume=/dev/mapper/root resume_offset=X rw quiet splash initrd=\amd-ucode.img initrd=\initramfs-linux.img' --verbose
 ```
 
 Utilizes some kernel params for various fixes listed [in the Arch Wiki for Framework](https://wiki.archlinux.org/title/Framework_Laptop_13).
