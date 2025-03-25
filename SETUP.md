@@ -66,7 +66,7 @@ swapon /mnt/swapfile
 ### Install Arch Linux
 
 ```bash
-pacstrap -K /mnt base base-devel linux linux-firmware nano sudo networkmanager efibootmgr git curl wget reflector nftables pipewire pipewire-alsa pipewire-pulse wireplumber less
+pacstrap -K /mnt base base-devel linux linux-firmware nano sudo networkmanager efibootmgr git curl wget reflector nftables pipewire pipewire-alsa pipewire-pulse wireplumber less iwd wireless-regdb
 genfstab -U /mnt >> /mnt/etc/fstab
 arch-chroot /mnt
 ```
@@ -79,6 +79,7 @@ hwclock --systohc
 nano /etc/locale.gen # Uncomment `en_US.UTF-8`
 locale-gen
 echo 'LANG=en_US.UTF-8' > /etc/locale.conf
+nano /etc/conf.d/wireless-regdom # Uncomment your current country
 ```
 
 ### Set the Hostname
@@ -129,9 +130,10 @@ efibootmgr --disk /dev/nvme0nX --part 1 --create --label "HOSTNAME" --loader /vm
 
 Utilizes some kernel params for various fixes listed [in the Arch Wiki for Framework](https://wiki.archlinux.org/title/Framework_Laptop_13).
 
-### Ensure NetworkManager is always running
+### Configure NetworkManager
 
 ```bash
+echo -e "[device]\nwifi.backend=iwd" > /etc/NetworkManager/conf.d/wifi_backend.conf
 systemctl enable NetworkManager
 ```
 
