@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
-export EDITOR="nano"
 export GPG_TTY=$(tty)
+export EDITOR="nano"
 
 ZSH_THEME="avit"
 
@@ -11,13 +11,25 @@ plugins=(
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# load alias helpers
 source $HOME/.aliases
 
-# Load fnm
-eval "$(fnm env --use-on-cd)"
+# shhhh
+if [[ -e $HOME/.secrets ]]; then
+  source $HOME/.secrets
+fi
 
-# Fix for SSH over kitty
+# load fnm
+FNM_PATH="$HOME/.local/share/fnm"
+
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$HOME/.local/share/fnm:$PATH"
+  eval "$(fnm env)"
+fi
+
+# fix for ssh inside kitty
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
-# Say hello!
+# hi!
 echo "$(<~/name.txt)"

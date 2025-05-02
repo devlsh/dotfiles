@@ -1,6 +1,6 @@
-# Generic
-alias editalias="nano ~/.aliases"
-alias reloadalias="source ~/.zshrc"
+# generic
+alias edit-alias="nano ~/.aliases"
+alias reload-alias="source ~/.zshrc"
 alias pub="cat ~/.ssh/id_ed25519.pub"
 alias shutdown="systemctl poweroff"
 alias matrix="cmatrix"
@@ -8,19 +8,12 @@ alias cat="bat"
 alias fetch="neofetch"
 alias pdf="zathura"
 alias mixer="ncpamixer"
-alias vim="nvim"
 alias ls="ls -la"
 
-# Helpers
-alias flashgbx="sudo chmod 666 /dev/ttyUSB0 && python3 -m FlashGBX"
-alias mount-storage="sudo cryptsetup open /dev/sdc1 storage && sudo mount -o gid=oyed,fmask=113,dmask=002 /dev/mapper/storage /mnt/storage && cd /mnt/storage"
-alias unmount-storage="cd ~ && sudo umount /mnt/storage && sudo cryptsetup close storage"
+# helpers
 alias remove-orphans="pacman -Qtdq | sudo pacman -Rns -"
-alias habbo="~/habbo/Habbo"
 
-# VSCode shortcuts
-alias canvid="code ~/sites/videocom/canvid && exit"
-alias casthub="code ~/sites/casthub && exit"
-alias places="code ~/sites/places && exit"
-alias oyed="code ~/sites/oyed && exit"
-alias presswork="code ~/sites/presswork && exit"
+# code shortcuts
+alias devlsh="code ~/sites/devlsh && exit"
+alias dotfiles="code ~/sites/dotfiles && exit"
+alias teris="code ~/sites/teris && exit"

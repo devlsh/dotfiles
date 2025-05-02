@@ -1,0 +1,65 @@
+/**
+ * @name system24
+ * @description A tui-style discord theme.
+ * @author refact0r, Liyua
+ * @version 1.0.0
+ * @invite nz87hXyvcy
+ * @website https://github.com/refact0r/system24
+ * @source https://github.com/refact0r/system24/blob/master/system24.theme.css
+ * @authorId 508863359777505290
+ * @authorLink https://www.refact0r.dev
+*/
+
+@import url('https://refact0r.github.io/system24/build/system24.css');
+
+body {{
+	--font: 'Dank Mono';
+	--code-font: 'Dank Mono';
+}}
+
+:root {{
+	--bg-1: oklch(from {background} calc(l + 0.12) c h);
+	--bg-2: oklch(from {background} calc(l + 0.08) c h);
+	--bg-3: oklch(from {background} calc(l + 0.04) c h);
+	--bg-4: oklch(from {background} l c h);
+	--hover: var(--bg-3);
+	--active: var(--bg-2);
+	--active-2: var(--bg-1);
+
+	--accent-new: oklch(from {color1} l c h);
+
+    --text-0: oklch(from {color1} l c h);
+    --text-1: oklch(from {foreground} 100% c h);
+    --text-2: oklch(from {color1} l c h);
+    --text-3: oklch(from {foreground} 80% c h);
+    --text-4: oklch(from {foreground} 60% c h);
+    --text-5: oklch(from {foreground} 40% c h);
+
+	--purple-1: oklch(from var(--purple) calc(l + 0.2) c h);
+    --purple-2: oklch(from var(--purple) calc(l + 0.1) c h);
+    --purple-3: oklch(from {color1} l c h);
+    --purple-4: oklch(from var(--purple) calc(l - 0.1) c h);
+    --purple-5: oklch(from var(--purple) calc(l - 0.2) c h);
+
+	--blue-1: oklch(from var(--blue) calc(l + 0.2) c h);
+    --blue-2: oklch(from var(--blue) calc(l + 0.1) c h);
+    --blue-3: oklch(from {color2} l c h);
+    --blue-4: oklch(from var(--blue) calc(l - 0.1) c h);
+    --blue-5: oklch(from var(--blue) calc(l - 0.2) c h);
+
+	--yellow-1: oklch(from var(--yellow) calc(l + 0.2) c h);
+    --yellow-2: oklch(from var(--yellow) calc(l + 0.1) c h);
+    --yellow-3: oklch(from {color3} l c h);
+    --yellow-4: oklch(from var(--yellow) calc(l - 0.1) c h);
+    --yellow-5: oklch(from var(--yellow) calc(l - 0.2) c h);
+
+	--green-1: oklch(from var(--green) calc(l + 0.2) c h);
+    --green-2: oklch(from var(--green) calc(l + 0.1) c h);
+    --green-3: oklch(from {color4} l c h);
+    --green-4: oklch(from var(--green) calc(l - 0.1) c h);
+    --green-5: oklch(from var(--green) calc(l - 0.2) c h);
+
+	--top-bar-button-position: hide;
+    --top-bar-title-position: hide;
+    --subtle-top-bar-title: hide;
+}}
