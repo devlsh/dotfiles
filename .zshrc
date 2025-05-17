@@ -12,23 +12,21 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# load alias helpers
+# load alias helpers.
 source $HOME/.aliases
 
-# shhhh
+# shhhh.
 if [[ -e $HOME/.secrets ]]; then
   source $HOME/.secrets
 fi
 
-# load fnm
-FNM_PATH="$HOME/.local/share/fnm"
-
-if [ -d "$FNM_PATH" ]; then
+# load fnm.
+if [ -d "$HOME/.local/share/fnm" ]; then
   export PATH="$HOME/.local/share/fnm:$PATH"
-  eval "$(fnm env)"
+  eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
 fi
 
-# fix for ssh inside kitty
+# fix for ssh inside kitty.
 [ "$TERM" = "xterm-kitty" ] && alias ssh="kitty +kitten ssh"
 
 # hi!

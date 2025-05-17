@@ -2,7 +2,7 @@
 
 SCRIPTS=$HOME/.config/hypr/scripts
 
-# Kill mako and waybar.
+# kill mako and waybar if they're already running.
 _ps=(waybar mako kanshi)
 
 for _prs in "${_ps[@]}"; do
@@ -11,7 +11,7 @@ for _prs in "${_ps[@]}"; do
   fi
 done
 
-# Re-launch mako and waybar.
+# launch mako, waybar and kanshi.
 ${SCRIPTS}/notifications &
 ${SCRIPTS}/statusbar &
 ${SCRIPTS}/monitors &

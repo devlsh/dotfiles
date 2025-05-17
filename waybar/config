@@ -29,7 +29,8 @@
     "format": "{icon} {volume}%",
     "format-muted": "󰝟 muted",
     "format-source-muted": "󰝟 muted",
-    "format-icons": ["󰕿", "󰖀", "󰕾"]
+    "format-icons": ["󰕿", "󰖀", "󰕾"],
+    "on-click": "pamixer -t"
   },
   "temperature": {
     "format": "󰔏 {temperatureC}°C"

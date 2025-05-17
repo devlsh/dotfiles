@@ -5,7 +5,7 @@ time=$(date +%Y-%m-%d-%H-%M-%S)
 dir="$(xdg-user-dir)/pictures/screenshots"
 file="${time}.png"
 
-# Create the screenshots directory if it doesn't exist.
+# create the screenshots directory if it doesn't exist.
 if [[ ! -d "$dir" ]]; then
   mkdir -p "$dir"
 fi

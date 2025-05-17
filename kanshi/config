@@ -4,5 +4,5 @@ profile {
 
 profile {
   output eDP-1 enable scale 2 mode 2880x1920@120Hz position 1000,1440
-  output DP-9 enable scale 1 mode 3440x1440@144Hz position 0,0
+  output DP-10 enable scale 1 mode 3440x1440@144Hz position 0,0
 }

@@ -1,4 +1,4 @@
-# generic
+# generic aliases.
 alias edit-alias="nano ~/.aliases"
 alias reload-alias="source ~/.zshrc"
 alias pub="cat ~/.ssh/id_ed25519.pub"
@@ -10,10 +10,11 @@ alias pdf="zathura"
 alias mixer="ncpamixer"
 alias ls="ls -la"
 
-# helpers
+# helpers.
 alias remove-orphans="pacman -Qtdq | sudo pacman -Rns -"
 
-# code shortcuts
+# code shortcuts.
 alias devlsh="code ~/sites/devlsh && exit"
+alias evilkiwi="code ~/sites/evilkiwi && exit"
 alias dotfiles="code ~/sites/dotfiles && exit"
 alias teris="code ~/sites/teris && exit"
